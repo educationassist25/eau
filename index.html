@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education Assist for USA</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1d4ed8',
+            secondary: '#0e5cad',
+            accent: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .section-hidden {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s;
+    }
+    .section-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 md:p-6 shadow-lg rounded-b-3xl sticky top-0 z-50">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <!-- Logo & Title -->
+       <!-- Logo & Title -->
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo-new.png" alt="Education Assist Logo" class="w-12 h-12 object-contain" />
+        <span class="text-3xl font-bold">Education Assist for USA</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul class="flex flex-wrap justify-center space-x-3 md:space-x-6 text-base md:text-lg font-medium">
+          <li><a href="#about" class="hover:text-gray-200 transition-colors">About Us</a></li>
+          <li><a href="#why-choose" class="hover:text-gray-200 transition-colors">Why Choose Us</a></li>
+          <li><a href="#service" class="hover:text-gray-200 transition-colors">Services</a></li>
+          <li><a href="#booking" class="hover:text-gray-200 transition-colors">Free Consultation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-16 md:py-24">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your Pathway to U.S. Education</h1>
+        <p class="text-xl md:text-2xl mb-8">Expert guidance for graduate programs in Biological Sciences</p>
+        <a href="#booking" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all duration-300 inline-block">
+          Book Free Consultation <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="w-80 h-80 bg-white rounded-full flex items-center justify-center shadow-2xl">
+          <i class="fas fa-graduation-cap text-blue-500 text-8xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content + Cover Photo -->
+  <div class="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8 items-start">
+
+    <!-- Left: Main Content -->
+    <main class="flex-1 space-y-16">
+
+      <!-- About Us Section -->
+      <section id="about" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 section-hidden">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">About Us</h2>
+        <p class="text-justify text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Education Assist for USA is your trusted partner in achieving your American educational goals, specializing in guiding international students through the graduate school application process for Master’s and Ph.D. programs in the Biological Sciences. We provide personalized support at every step-from selecting the right universities to writing and refining your Curriculum Vitae (CV), Statement of Purpose (SOP), Cover Letter, and Letters of Recommendation (LOR). We also help you prepare for interviews and navigate visa requirements. In addition, you can schedule one-on-one video consultations with experienced U.S. university faculty, ensuring you receive expert, transparent advice tailored to your unique academic journey. Our student-focused approach empowers you to submit the strongest possible application and confidently pursue your academic and professional aspirations-building a clear and successful pathway to your future in the Biological Sciences.
+        </p>
+      </section>
+
+      <!-- Service We Offered -->
+      <section id="service" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 section-hidden">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">Services We Offer</h2>
+        
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+          <div class="service-card bg-blue-50 p-6 rounded-2xl shadow-md border border-blue-100 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-user-friends text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">One-on-One Counseling</h3>
+            <p class="text-gray-600">Personalized guidance tailored to your specific needs and goals.</p>
+          </div>
+          
+          <div class="service-card bg-blue-50 p-6 rounded-2xl shadow-md border border-blue-100 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">SOP, Resume, and LOR Writing</h3>
+            <p class="text-gray-600">Professional assistance with your application documents.</p>
+          </div>
+          
+          <div class="service-card bg-blue-50 p-6 rounded-2xl shadow-md border border-blue-100 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-university text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">University Selection & Application Support</h3>
+            <p class="text-gray-600">Help choosing the right programs and navigating applications.</p>
+          </div>
+          
+          <div class="service-card bg-blue-50 p-6 rounded-2xl shadow-md border border-blue-100 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-passport text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Visa Guidance</h3>
+            <p class="text-gray-600">Expert advice for navigating the student visa process.</p>
+          </div>
+        </div>
+        
+        <p class="text-center text-gray-500 mt-10 text-base md:text-lg">
+          Our mission is to empower students with the tools, knowledge, and support to succeed in U.S. higher education.
+        </p>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section id="why-choose" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 section-hidden">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">Why Choose Us?</h2>
+        <p class="text-justify text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+          Consult with an experienced faculty member at a U.S. Universities through a one-to-one video session. Gain personalized guidance tailored to your goals, with 100% transparency throughout the consultation process. Our experts provide honest, actionable advice to help you navigate applications, strengthen your profile, and plan your pathway to success in the U.S. medical education system.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div class="bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-user-tie text-green-600 text-xl"></i>
+            </div>
+            <p class="text-lg font-medium text-gray-700">Expert Counselors for Master's & Ph.D. Programs</p>
+          </div>
+          
+          <div class="bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-road text-green-600 text-xl"></i>
+            </div>
+            <p class="text-lg font-medium text-gray-700">Step-by-Step Guidance</p>
+          </div>
+          
+          <div class="bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-brain text-green-600 text-xl"></i>
+            </div>
+            <p class="text-lg font-medium text-gray-700">Insights into U.S. Education System</p>
+          </div>
+          
+          <div class="bg-green-50 p-6 rounded-2xl shadow-md border border-green-100">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-line text-green-600 text-xl"></i>
+            </div>
+            <p class="text-lg font-medium text-gray-700">Proven Track Record</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Free Consultation Booking Section -->
+      <section id="booking" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 section-hidden">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">Book a Free 30-Minute Consultation</h2>
+        <p class="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Ready to take the next step? Schedule a free 30-minute consultation with one of our expert advisors. Let's talk about your goals and how we can help you succeed.
+        </p>
+
+        <form class="max-w-2xl mx-auto space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+            <input type="text" id="name" name="name" required
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors" 
+              placeholder="Enter your full name"/>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" id="email" name="email" required
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              placeholder="Enter your email address" />
+          </div>
+          
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (Optional)</label>
+            <input type="tel" id="phone" name="phone"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              placeholder="Enter your phone number" />
+          </div>
+
+          <div>
+            <label for="program" class="block text-sm font-medium text-gray-700 mb-1">Program of Interest</label>
+            <select id="program" name="program" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors">
+              <option value="">Select a program</option>
+              <option value="masters">Master's Degree</option>
+              <option value="phd">Ph.D. Program</option>
+              <option value="both">Both Master's and Ph.D.</option>
+              <option value="unsure">Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+            <textarea id="message" name="message" rows="4"
+              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              placeholder="Tell us what you'd like to discuss..."></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit"
+              class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">
+              Request Free Consultation
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Right: Cover Photo/Additional Content -->
+    <aside class="w-full lg:w-1/3 bg-white p-6 rounded-3xl shadow-xl sticky top-28">
+      <div class="text-center mb-8">
+        <div class="w-40 h-40 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+          <i class="fas fa-user-graduate text-blue-600 text-6xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-blue-800 mb-2">Our Expert</h3>
+       <p class="text-1xl font-bold text-green-600 mb-2">"Consult with experienced faculty at U.S. universities."</p>
+        <p class="text-gray-500">Expert Counselors on Master’s and Ph.D. Program in any of Biological Science program </p>
+      </div>
+      
+      <div class="bg-blue-50 p-6 rounded-2xl mb-6">
+        <h4 class="text-xl font-semibold text-blue-700 mb-3">Success Stories</h4>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <i class="fas fa-quote-left text-blue-400 mt-1 mr-3"></i>
+            </div>
+            <p class="text-gray-600">"Education Assist helped me get into my dream Ph.D. program with a full scholarship!"</p>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <i class="fas fa-quote-left text-blue-400 mt-1 mr-3"></i>
+            </div>
+            <p class="text-gray-600">"The SOP review service was invaluable. They helped me highlight my strengths perfectly."</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-green-50 p-6 rounded-2xl">
+        <h4 class="text-xl font-semibold text-green-700 mb-3">Quick Contact</h4>
+        <div class="space-y-3">
+          <div class="flex items-center">
+            <i class="fas fa-phone-alt text-green-500 w-6"></i>
+            <span class="ml-3">+1 (682) 308-9873</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-whatsapp text-green-500 w-6"></i>
+            <a href="https://wa.me/16823089873" target="_blank" class="ml-3 text-blue-600 hover:underline">Message on WhatsApp</a>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope text-green-500 w-6"></i>
+            <a href="mailto:education.assist25@gmail.com" class="ml-3 text-blue-600 hover:underline">education.assist25@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10 mt-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Education Assist for USA</h3>
+          <p>Your trusted partner for graduate education in the United States, specializing in Biological Sciences programs.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#service" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#why-choose" class="hover:text-white transition-colors">Why Choose Us</a></li>
+            <li><a href="#booking" class="hover:text-white transition-colors">Free Consultation</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Contact Info</h3>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 w-4"></i>
+              <span>Missouri City, TX 77459</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3 w-4"></i>
+              <span>+1 (682) 308-9873</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 w-4"></i>
+              <a href="mailto:education.assist25@gmail.com" class="hover:text-white">education.assist25@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/profile.php?id=61577945177208" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/YourProfile" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/YourHandle" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center hover:bg-blue-300 transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>© 2025 <span class="text-blue-400 font-semibold">Education Assist for USA</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Animation for sections when they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section-hidden');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+      
+      // Form submission handling
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Thank you for your consultation request! We will contact you shortly.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
