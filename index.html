@@ -371,19 +371,27 @@
       });
       
       // Form submission handling
-      const form = document.querySelector('form');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          alert('Thank you for your consultation request! We will contact you shortly.');
-          form.reset();
-        });
-      }
-    });
+        const formData = new FormData(form);
+
+   fetch("/", {
+     method: "POST",
+     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+     body: new URLSearchParams(formData).toString(),
+   })
+   .then(() => {
+     alert('Thank you for your consultation request! We will contact you shortly.');
+     form.reset();
+   })
+   .catch(error => {
+     alert('There was a problem with your submission. Please try again.');
+     console.error(error);
+   });
+ });
   </script>
 </body>
 
 </html>
+
 
 
 
