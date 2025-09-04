@@ -193,7 +193,8 @@
         </p>
 
       <!-- ✅ Netlify Form -->
-      <form name="consultation" method="POST" data-netlify="true" class="max-w-2xl mx-auto space-y-6">
+       <form name="consultation" method="POST" netlify data-netlify="true" class="max-w-2xl mx-auto space-y-6">
+    <input type="hidden" name="form-name" value="consultation" />
        <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
           <input type="text" id="name" name="name" required
@@ -391,6 +392,7 @@
 </body>
 
 </html>
+
 
 
 
