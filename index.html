@@ -374,27 +374,26 @@
         observer.observe(section);
       });
       
-      // Form submission handling
-        const formData = new FormData(form);
-
-   fetch("/", {
-     method: "POST",
-     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-     body: new URLSearchParams(formData).toString(),
-   })
-   .then(() => {
-     alert('Thank you for your consultation request! We will contact you shortly.');
-     form.reset();
-   })
-   .catch(error => {
-     alert('There was a problem with your submission. Please try again.');
-     console.error(error);
-   });
- });
+      // Form submission handling - Netlify compatible
+const form = document.querySelector('form');
+if (form) {
+  // Remove any existing event listeners
+  form.onsubmit = null;
+  
+  // Add new listener that doesn't prevent default behavior
+  form.addEventListener('submit', function() {
+    // Optional: You can still show a message, but don't prevent default
+    setTimeout(function() {
+      alert('Thank you for your consultation request! We will contact you shortly.');
+      form.reset();
+    }, 1000);
+  });
+}
   </script>
 </body>
 
 </html>
+
 
 
 
