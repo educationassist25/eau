@@ -19,14 +19,14 @@ app.post('/send', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'your.email@gmail.com',       // Replace with your email
-      pass: 'your_app_password'           // Use an app password if using Gmail
+      user: 'education.assist25@gmail.com',       // Replace with your email
+      pass: 'Abu@12durlov'           // Use an app password if using Gmail
     }
   });
 
   const mailOptions = {
     from: email,
-    to: 'your.email@gmail.com',           // Where you want to receive messages
+    to: 'education.assist25@gmail.com',           // Where you want to receive messages
     subject: `New Contact Form Submission from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
   };
@@ -43,3 +43,4 @@ app.post('/send', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
