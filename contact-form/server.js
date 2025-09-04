@@ -19,29 +19,39 @@ app.post('/send', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'education.assist25@gmail.com',       // Replace with your email
-      pass: 'cyhm zrmj oaui rknl'           // Use an app password if using Gmail
+      user: 'education.assist25@gmail.com', // Your Gmail address
+      pass: 'cyhmzrmjoaurknl'               // Your Gmail App Password (no spaces)
     }
   });
 
+  // Verify transporter setup
+  transporter.verify((error, success) => {
+    if (error) {
+      console.error('Transporter verification failed:', error.message);
+    } else {
+      console.log('Server is ready to send emails');
+    }
+  });
+
+  // Email options
   const mailOptions = {
-    from: email,
-    to: 'education.assist25@gmail.com',           // Where you want to receive messages
+    from: 'education.assist25@gmail.com', // Use your own email to avoid spoofing
+    to: 'education.assist25@gmail.com',   // Where you want to receive messages
     subject: `New Contact Form Submission from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
+    text: `From: ${name} <${email}>\n\nMessage:\n${message}`
   };
 
   try {
     await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully');
     res.status(200).send('Message sent successfully!');
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email:', error.message, error.response);
     res.status(500).send('Failed to send message.');
   }
 });
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
