@@ -195,13 +195,20 @@
       <!-- ✅ Netlify Form -->
       <form name="consultation" method="POST" data-netlify="true" class="max-w-2xl mx-auto space-y-6">
         
-        <!-- Hidden input for Netlify bot detection -->
-        <input type="hidden" name="form-name" value="consultation" />
+       <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" id="name" name="name" required
+            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm 
+                   focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            placeholder="Enter your full name"/>
+        </div>
 
-        <!-- Honeypot field (spam protection) -->
-        <p class="hidden">
-          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-        </p>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input type="email" id="email" name="email" required
+            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm 
+                   focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            placeholder="ayz@uit.com"/>
 
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -387,5 +394,6 @@
 </body>
 
 </html>
+
 
 
