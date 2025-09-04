@@ -350,14 +350,57 @@
         observer.observe(section);
       });
       // Form submission handling 
-      const form = document.querySelector('form'); 
-      if (form) { form.addEventListener('submit', function(e) { e.preventDefault(); 
-      alert('Thank you for your consultation request! We will contact you shortly.'); 
-      form.reset(); }); } });
+      document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.section-hidden');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('section-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+
+  // Form submission handling with fetch
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      try {
+        const response = await fetch('/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          alert('✅ Thank you for your consultation request! We will contact you shortly.');
+          form.reset();
+        } else {
+          alert('❌ Failed to send message. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('⚠️ Something went wrong. Please try again.');
+      }
+    });
+  }
+});
+
   </script>
 </body>
 
 </html>
+
 
 
 
