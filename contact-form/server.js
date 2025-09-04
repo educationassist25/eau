@@ -20,7 +20,7 @@ app.post('/send', async (req, res) => {
     service: 'Gmail',
     auth: {
       user: 'education.assist25@gmail.com', // Your Gmail address
-      pass: 'cyhmzrmjoaurknl'               // Your Gmail App Password (no spaces)
+      pass: 'cyhmzrmjoaurknl'               // Your Gmail App Password
     }
   });
 
@@ -43,15 +43,15 @@ app.post('/send', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log('Email sent successfully');
+    console.log('✅ Email sent successfully');
     res.status(200).send('Message sent successfully!');
   } catch (error) {
-    console.error('Error sending email:', error.message, error.response);
+    console.error('❌ Error sending email:', error.message, error.response);
     res.status(500).send('Failed to send message.');
   }
 });
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
