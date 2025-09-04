@@ -35,7 +35,7 @@ app.post('/send', async (req, res) => {
 
   // Email options
   const mailOptions = {
-    from: 'education.assist25@gmail.com', // Use your own email to avoid spoofing
+    from: 'Your Email', // Use your own email to avoid spoofing
     to: 'education.assist25@gmail.com',   // Where you want to receive messages
     subject: `New Contact Form Submission from ${name}`,
     text: `From: ${name} <${email}>\n\nMessage:\n${message}`
@@ -55,3 +55,4 @@ app.post('/send', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
