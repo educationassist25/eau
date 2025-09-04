@@ -20,7 +20,7 @@ app.post('/send', async (req, res) => {
     service: 'Gmail',
     auth: {
       user: 'education.assist25@gmail.com',       // Replace with your email
-      pass: 'Abu@12durlov'           // Use an app password if using Gmail
+      pass: 'cyhm zrmj oaui rknl'           // Use an app password if using Gmail
     }
   });
 
@@ -43,4 +43,5 @@ app.post('/send', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
 
