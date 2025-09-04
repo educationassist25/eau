@@ -15,38 +15,42 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/send', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Configure your email transport
+  // Configure Gmail SMTP transport
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use SSL
     auth: {
-      user: 'education.assist25@gmail.com', // Your Gmail address
-      pass: 'cyhmzrmjoaurknl'               // Your Gmail App Password
+      user: 'education.assist25@gmail.com', // your Gmail
+      pass: 'cyhmzrmjoaurknl'                // your Gmail App Password
     }
   });
 
-  // Verify transporter setup
+  // Verify SMTP connection
   transporter.verify((error, success) => {
     if (error) {
-      console.error('Transporter verification failed:', error.message);
+      console.error('❌ SMTP connection failed:', error.message);
     } else {
-      console.log('Server is ready to send emails');
+      console.log('✅ SMTP server is ready to send emails');
     }
   });
 
   // Email options
   const mailOptions = {
-    from: 'Your Email', // Use your own email to avoid spoofing
-    to: 'education.assist25@gmail.com',   // Where you want to receive messages
+    from: 'education.assist25@gmail.com', // must match authenticated user
+    to: 'education.assist25@gmail.com',   // where you want to receive emails
     subject: `New Contact Form Submission from ${name}`,
     text: `From: ${name} <${email}>\n\nMessage:\n${message}`
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
     console.log('✅ Email sent successfully');
+    console.log('📨 Message ID:', info.messageId);
+    console.log('🔗 Preview URL (if using Ethereal):', nodemailer.getTestMessageUrl(info));
     res.status(200).send('Message sent successfully!');
   } catch (error) {
-    console.error('❌ Error sending email:', error.message, error.response);
+    console.error('❌ Error sending email:', error.message);
     res.status(500).send('Failed to send message.');
   }
 });
@@ -55,4 +59,3 @@ app.post('/send', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
-
