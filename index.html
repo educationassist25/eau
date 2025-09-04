@@ -192,35 +192,34 @@
           Ready to take the next step? Schedule a free 30-minute consultation with one of our expert advisors. Let's talk about your goals and how we can help you succeed.
         </p>
 
-        <form action="/contact" method="POST" class="max-w-2xl mx-auto space-y-6">
-  const express = require('express');
-const nodemailer = require('nodemailer');
-const app = express();
+        <form action="/send" method="POST" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6">
+    <h2 class="text-2xl font-bold text-gray-800">Contact Us</h2>
 
-app.use(express.json());
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+      <input type="text" id="name" name="name" required
+             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+    </div>
 
-app.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+      <input type="email" id="email" name="email" required
+             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+    </div>
 
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'your@email.com',
-      pass: 'yourpassword'
-    }
-  });
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+      <textarea id="message" name="message" rows="5" required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+    </div>
 
-  await transporter.sendMail({
-    from: email,
-    to: 'your@email.com',
-    subject: `New Contact Form Submission from ${name}`,
-    text: message
-  });
+    <button type="submit"
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+      Send Message
+    </button>
 
-  res.send('Message sent!');
-});
-
-</form>
+    <p class="text-sm text-gray-500 text-center">We'll get back to you as soon as possible.</p>
+  </form>
       </section>
     </main>
 
@@ -365,3 +364,4 @@ app.post('/contact', async (req, res) => {
 </body>
 
 </html>
+
