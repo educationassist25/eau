@@ -32,20 +32,21 @@
      <!-- Navigation -->
 <nav>
   <ul class="flex space-x-6 text-lg font-medium">
-    <!-- About Us with Dropdown -->
     <li class="relative group">
       <a href="#about" class="hover:text-gray-200 transition-colors">About Us</a>
-      <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+      
+      <!-- Dropdown menu for Founder Message -->
+      <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
         <li>
-          <a href="founder.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white rounded-t-lg">
+          <a href="#founder-message" class="block px-4 py-2 text-gray-700 hover:bg-blue-600 hover:text-white rounded-t-lg">
             Founder Message
           </a>
         </li>
       </ul>
     </li>
+
     <li><a href="#why-choose" class="hover:text-gray-200 transition-colors">Why Choose Us</a></li>
     <li><a href="#service" class="hover:text-gray-200 transition-colors">Service We Offered</a></li>
-    <li><a href="#booking" class="hover:text-gray-200 transition-colors">Free Consultation</a></li>
   </ul>
 </nav>
     </div>
@@ -266,6 +267,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 </footer>
 
     </main>
+
 
 
 
