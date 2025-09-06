@@ -32,7 +32,17 @@
       <!-- Navigation -->
       <nav>
         <ul class="flex space-x-6 text-lg font-medium">
-          <li><a href="#about" class="hover:text-gray-200 transition-colors">About Us</a></li>
+          <!-- About Us with Dropdown -->
+          <li class="relative group">
+            <a href="#about" class="hover:text-gray-200 transition-colors">About Us</a>
+            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-48">
+              <li>
+                <a href="#founder" class="block px-4 py-2 hover:bg-blue-600 hover:text-white rounded-t-lg">
+                  Founder Message
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="#why-choose" class="hover:text-gray-200 transition-colors">Why Choose Us</a></li>
           <li><a href="#service" class="hover:text-gray-200 transition-colors">Service We Offered</a></li>
           <li><a href="#booking" class="hover:text-gray-200 transition-colors">Free Consultation</a></li>
@@ -46,13 +56,26 @@
 
     <!-- Left: Main Content -->
     <main class="flex-1 space-y-16">
-
-      <!-- About Us Section -->
+        <!-- About Us Section -->
       <section id="about" class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl hover:scale-[1.01] transition-transform">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">About Us</h2>
-      <p class="text-justify text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-Education Assist for USA is your trusted partner in achieving your American educational dreams, specializing in helping international students apply for graduate school, including Master’s and Ph.D. programs in any field of Biological Sciences. We provide personalized guidance to simplify every step of the application process—from selecting the right universities and crafting compelling Statements of Purpose (SOPs) and recommendation letters to refining your resume and preparing for interviews and visa requirements. Additionally, you can consult one-to-one via video with an experienced faculty member at U.S. universities, gaining expert advice with 100% transparency. Our student-focused approach ensures you are fully equipped to submit your strongest application and confidently pursue your academic and professional goals, building a clear pathway to your future in the Biological Sciences.
-    
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">About Us</h2>
+        <p class="text-justify text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Education Assist for USA is your trusted partner in achieving your American educational dreams...
+        </p>
+      </section>
+
+      <!-- Founder Message Section -->
+      <section id="founder" class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl hover:scale-[1.01] transition-transform">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">Founder Message</h2>
+        <p class="text-justify text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed space-y-4">
+          Welcome to Education Assist for USA.<br><br>
+          The journey to higher education in the United States can be exciting but also overwhelming. From choosing the right university and preparing application materials, to navigating the visa process, every step requires careful planning and informed decisions. Having seen how students often struggle through this process, I established Education Assist for USA with the vision of providing trusted, personalized guidance that makes this journey smoother and more achievable.<br><br>
+          Our mission is to empower aspiring students—particularly those pursuing Master’s and Ph.D. programs in the Biological Sciences—by offering expert counseling, comprehensive application support, and one-on-one mentoring. We combine insider knowledge of the U.S. education system with a step-by-step approach, ensuring you have the tools, strategies, and confidence to succeed.<br><br>
+          What sets us apart is our commitment to students as individuals. Every application tells a unique story, and our role is to help you present your best self—whether through a strong Statement of Purpose, a polished resume, or focused interview preparation. Beyond securing admission, we prepare you for long-term success in academia and your professional career.<br><br>
+          At Education Assist for USA, we believe that with the right support, your dream of studying in the U.S. can become a reality. It is my honor to walk alongside you on this journey and to celebrate your achievements as you reach new milestones.<br><br>
+          <span class="font-semibold">Warm regards,<br>Founder, Education Assist for USA</span>
+        </p>
+      </section>
 <!-- Service We Offered -->
 <section id="service" class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl hover:scale-[1.01] transition-transform">
 
@@ -255,6 +278,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 </footer>
 
     </main>
+
 
 
 
