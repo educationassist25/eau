@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Education Assist for USA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .faq-question { font-weight: 600; cursor: pointer; padding: 0.5rem 0; }
+    .faq-answer { display: none; padding-left: 1rem; color: #4B5563; }
+    .faq-item { border-bottom: 1px solid #E5E7EB; padding: 0.5rem 0; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 shadow-lg rounded-b-3xl">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo-new.png" alt="Education Assist Logo" class="w-12 h-12 object-contain" />
+        <span class="text-3xl font-bold">Education Assist for USA</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-lg font-medium">
+          <li><a href="index.html#about" class="hover:text-gray-200 transition-colors">About Us</a></li>
+          <li><a href="index.html#why-choose" class="hover:text-gray-200 transition-colors">Why Choose Us</a></li>
+          <li class="relative group">
+            <a href="index.html#service" class="hover:text-gray-200 transition-colors">Service We Offered</a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible 
+                       group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <li>
+                <a href="pricing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-600 hover:text-white rounded-lg">Pricing</a>
+              </li>
+              <li>
+                <a href="faq.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-600 hover:text-white rounded-lg">FAQ</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#booking" class="hover:text-gray-200 transition-colors">Free Consultation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FAQ Content -->
+  <main class="container mx-auto px-4 py-12">
+    <section class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center text-blue-800 mb-6">Frequently Asked Questions (FAQs)</h1>
+
+      <div class="space-y-4">
+        <!-- FAQ items -->
+        <div class="faq-item">
+          <div class="faq-question">1. What services does Education Assist for USA provide?</div>
+          <div class="faq-answer">We offer guidance on university selection, SOP (Statement of Purpose) and resume/essay reviews, visa documentation, interview preparation, publication assistance, and personalized counseling sessions for graduate school applications.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">2. Who can benefit from your services?</div>
+          <div class="faq-answer">Our services are ideal for students applying to Master’s and Ph.D. programs in Biological Sciences who want expert, step-by-step support to successfully navigate the U.S. admissions process.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">3. How does the Initial Counseling Session work?</div>
+          <div class="faq-answer">The 30-minute consultation allows us to review your academic profile, career goals, and build a personalized strategy for your U.S. university applications.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">4. Can you help with writing and editing my Statement of Purpose (SOP)?</div>
+          <div class="faq-answer">Yes. We provide SOP writing tailored to each university and editing services with revisions to ensure your SOP is polished, personalized, and competitive.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">5. Do you provide support for resumes and CVs?</div>
+          <div class="faq-answer">Absolutely. We offer professional formatting and content improvement to make your resume or CV stand out for graduate applications.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">6. How do you help with visa and interview preparation?</div>
+          <div class="faq-answer">We conduct mock interviews, provide personalized feedback, and guide you through documentation to ensure you feel confident and well-prepared.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">7. What makes Education Assist for USA different from other consultancies?</div>
+          <div class="faq-answer">We are guided by U.S.-based university faculty with insider knowledge, proven expertise, and a strong track record of success, offering step-by-step guidance throughout the process.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">8. What is included in the Full Application Package?</div>
+          <div class="faq-answer">The package includes SOP writing, resume/CV review, cover letter support, application guidance for multiple universities, and ongoing assistance until submission.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">9. Do you help convert dissertations into publishable manuscripts?</div>
+          <div class="faq-answer">Yes. We assist in transforming dissertations into professional, journal-ready manuscripts through editing, structuring, and formatting.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">10. What is the difference between manuscript drafting and manuscript finalization?</div>
+          <div class="faq-answer">Drafting: We create a structured manuscript from your dissertation.<br>Finalization: We refine, edit, and format an already-prepared manuscript for journal submission.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">11. Do you provide support for writing review articles?</div>
+          <div class="faq-answer">Yes. We prepare comprehensive review articles, including literature synthesis, critical analysis, and structured writing suitable for peer-reviewed journals.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">12. Will my publication be journal-ready after your service?</div>
+          <div class="faq-answer">Our goal is to prepare manuscripts that meet international journal standards. Final acceptance, however, depends on the journal’s scope, editorial board, and peer review process.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">13. Can you help me choose the right journal for my manuscript?</div>
+          <div class="faq-answer">Yes. We guide you in selecting suitable journals based on your research field, target audience, and desired impact.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">14. Do you provide plagiarism checking and editing for publications?</div>
+          <div class="faq-answer">Yes. We check manuscripts for plagiarism, ensure originality, and edit content to meet academic integrity and journal requirements.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">15. Can you assist with revisions after reviewer feedback?</div>
+          <div class="faq-answer">Yes. We offer support in addressing reviewer comments, making necessary revisions, and preparing resubmissions to improve the chances of acceptance.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Toggle FAQ answers
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
