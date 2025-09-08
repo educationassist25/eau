@@ -250,75 +250,31 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 <!-- Centered Popup Notice Banner -->
 <div id="popupNotice" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-  <div class="popup-content">
+  <div class="bg-white rounded-2xl p-8 w-11/12 md:w-3/4 lg:w-1/2 text-center shadow-2xl relative">
     <!-- Close Button -->
-    <button onclick="closePopup()" class="close-btn">&times;</button>
+    <button onclick="closePopup()" 
+            style="position:absolute; top:16px; right:16px; font-size:24px; color:#555; border:none; background:none; cursor:pointer;">
+      &times;
+    </button>
 
-    <h2 class="popup-title">Important Notice!</h2>
-    <p class="popup-message">
+    <h2 style="font-size:2rem; font-weight:800; margin-bottom:16px; color:#111;">Important Notice!</h2>
+    <p style="font-size:1.125rem; color:#333;">
       Welcome to Education Assist for USA! Don't miss our latest updates.
     </p>
   </div>
 </div>
 
-<style>
-  /* Popup container */
-  #popupNotice {
-    animation: fadeIn 0.3s ease-out;
-  }
-
-  /* Popup content box */
-  .popup-content {
-    background-color: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: none; /* Disable transitions */
-  }
-
-  /* Close button */
-  .close-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 24px;
-    color: #555;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-
-  /* Title and message */
-  .popup-title {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: #111;
-  }
-
-  .popup-message {
-    font-size: 1.125rem;
-    color: #333;
-  }
-
-  /* Fade-in animation */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-</style>
-
 <script>
   function closePopup() {
-    const popup = document.getElementById('popupNotice');
-    popup.style.display = 'none';
+    document.getElementById('popupNotice').style.display = 'none';
   }
-</script>
 
+  // Optional: Prevent any unwanted blinking by ensuring the popup is only shown once
+  document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popupNotice');
+    popup.style.display = 'flex'; // ensures popup stays visible without blinking
+  });
+</script>
 
 
 
@@ -377,6 +333,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 </footer>
 
     </main>
+
 
 
 
