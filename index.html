@@ -248,22 +248,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
 });
 </script>
 
-<!-- Floating Notice Board -->
-<div id="noticeBoard" class="fixed bottom-4 right-4 w-80 bg-yellow-200 border-l-4 border-yellow-500 shadow-lg rounded-lg p-4 z-50">
-  <div class="flex justify-between items-start">
-    <h3 class="font-bold text-lg text-yellow-900">Notice</h3>
-    <button onclick="closeNotice()" class="text-yellow-900 font-bold">&times;</button>
+<!-- Centered Popup Notice Board -->
+<div id="popupNotice" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+  <div class="bg-white rounded-2xl p-8 w-96 text-center shadow-2xl relative">
+    <button onclick="closePopup()" class="absolute top-4 right-4 text-gray-700 text-2xl font-bold">&times;</button>
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Important Notice!</h2>
+    <p class="text-xl text-gray-800">
+      Welcome to Education Assist for USA! Don't miss our latest updates.
+    </p>
   </div>
-  <p class="mt-2 text-yellow-800 text-sm">
-    Welcome to Education Assist for USA! Check out our latest updates and offers.
-  </p>
 </div>
 
 <script>
-  function closeNotice() {
-    document.getElementById('noticeBoard').style.display = 'none';
+  function closePopup() {
+    document.getElementById('popupNotice').style.display = 'none';
   }
 </script>
+
 
 </section>
 
@@ -320,6 +321,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 </footer>
 
     </main>
+
 
 
 
